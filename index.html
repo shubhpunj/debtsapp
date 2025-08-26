@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Davis Debts - Time Value of Money Calculator</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <meta name="theme-color" content="#007BFF">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Davis Debts</h1>
+    <p class="description">
+      Enter the amount Davis owed and the date he owed it. For each full week late, penalties
+      accumulate incrementally: $1 for the first week, plus $2 for the second week, plus $3 for
+      the third week, and so on. Partial weeks incur no penalty.
+    </p>
+    <form id="debt-form">
+      <div class="form-group">
+        <label for="principal">Amount Owed (USD)</label>
+        <input type="number" id="principal" min="0" step="0.01" required>
+      </div>
+      <div class="form-group">
+        <label for="owed-date">Date Debt Was Owed</label>
+        <input type="date" id="owed-date" required>
+      </div>
+      <button type="submit">Calculate</button>
+    </form>
+    <div id="result" class="result"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
